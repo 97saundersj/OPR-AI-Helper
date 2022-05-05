@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: '/OPR-AI-Helper'
+  publicPath: '/OPR-AI-Helper/'
 })
