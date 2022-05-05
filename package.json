@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "npm run build & git add dist -f & git commit -m 'adding dist subtree' & git subtree push --prefix dist origin gh-pages & git pull"
+    "deploy": "npm run build & git add dist -f & git commit -m 'adding dist subtree' & git subtree push --prefix dist origin gh-pages & git push"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
