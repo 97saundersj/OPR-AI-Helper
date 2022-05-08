@@ -13,11 +13,20 @@ export default {
 
 <template>
   <HelloWorld v-if="false" msg="Welcome to Your Vue.js App"/>
-  <UnitTypeSelector></UnitTypeSelector>
+  <div>
+    <UnitTypeSelector></UnitTypeSelector>
+  </div>
 </template>
 
 <style>
 #app {
   margin: 1%;
+}
+.decision-card{
+  width: auto;
+  margin: auto;
+  text-align: center;
+  max-width: 500px;
+  padding: 10px;
 }
 </style>
