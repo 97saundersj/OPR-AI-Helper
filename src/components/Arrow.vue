@@ -5,8 +5,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <svg width="100" height="100" style="transform: rotate(90deg);" xmlns="http://www.w3.org/2000/svg" float="left" >
+  <div class="arrow-container" style="">
+    <svg  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" float="left" >
       <defs>
         <marker id="arrowhead" markerWidth="10" markerHeight="3" 
         refX="0" refY="1.5" orient="auto" fill="lightgray">
@@ -21,4 +21,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.arrow-container {
+  width: 50px;
+  margin: auto;
+  margin-bottom: -10px;
+  margin-top: -5px;
+  transform: rotate(90deg);
+}
 </style>

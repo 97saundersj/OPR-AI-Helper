@@ -28,12 +28,12 @@ export default {
       <h2 class="card-header">Select a Unit Type</h2>
       <div class="card-body">
         <button class="btn btn-primary m-2" :title="hybridTooltip" @click="selectedUnit = 'hybrid'">Hybrid Unit</button>
-        <button class="btn btn-primary m-2" :title="shootingTooltip" @click="selectedUnit = 'shooting'">Shooting Unit</button>
-        <button class="btn btn-primary m-2" :title="meleeTooltip" @click="selectedUnit = 'melee'">Melee Unit</button>
+        <button class="btn btn-primary m-2" :title="shootingTooltip" @click="selectedUnit = 'shooting'" disabled>Shooting Unit</button>
+        <button class="btn btn-primary m-2" :title="meleeTooltip" @click="selectedUnit = 'melee'" disabled>Melee Unit</button>
       </div>
     </div>
-    <div v-if="true" class="decision-card">
-      <Arrow></Arrow>
+    <div v-if="selectedUnit">
+      <Arrow style="margin-top:5px;"></Arrow>
       <HybridUnit v-if="selectedUnit === 'hybrid'"></HybridUnit>
     </div>
 </div>
