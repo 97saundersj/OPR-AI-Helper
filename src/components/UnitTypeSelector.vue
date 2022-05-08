@@ -32,7 +32,7 @@ export default {
         <button class="btn btn-primary m-2" :title="meleeTooltip" @click="selectedUnit = 'melee'">Melee Unit</button>
       </div>
     </div>
-    <div v-if="true" class="decision-card">
+    <div v-if="selectedUnit" class="decision-card">
       <Arrow></Arrow>
       <HybridUnit v-if="selectedUnit === 'hybrid'"></HybridUnit>
     </div>
