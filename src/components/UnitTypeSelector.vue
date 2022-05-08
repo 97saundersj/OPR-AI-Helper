@@ -27,13 +27,32 @@ export default {
     <div class="decision-card card bg-dark">
       <h2 class="card-header">Select a Unit Type</h2>
       <div class="card-body">
-        <button class="btn btn-primary m-2" :title="hybridTooltip" @click="selectedUnit = 'hybrid'">Hybrid Unit</button>
-        <button class="btn btn-primary m-2" :title="shootingTooltip" @click="selectedUnit = 'shooting'" disabled>Shooting Unit</button>
-        <button class="btn btn-primary m-2" :title="meleeTooltip" @click="selectedUnit = 'melee'" disabled>Melee Unit</button>
+        <button 
+            class="btn m-2"
+            :class="selectedUnit === 'hybrid' ? 'btn-primary' : 'btn-secondary'"
+            :title="hybridTooltip" @click="selectedUnit = 'hybrid'">
+            Hybrid Unit
+        </button>
+        <button 
+          class="btn m-2"
+          :class="selectedUnit === 'shooting' ? 'btn-primary' : 'btn-secondary'"
+          :title="shootingTooltip" @click="selectedUnit = 'shooting'" 
+          disabled>
+            Shooting Unit
+        </button>
+
+        <button
+          class="btn m-2"
+          :class="selectedUnit === 'melee' ? 'btn-primary' : 'btn-secondary'"
+          :title="meleeTooltip"
+          @click="selectedUnit = 'melee'"
+          disabled>
+            Melee Unit
+        </button>
       </div>
     </div>
     <div v-if="selectedUnit">
-      <Arrow style="margin-top:5px;"></Arrow>
+      <Arrow class="arrow" style="margin-top:10px;"></Arrow>
       <HybridUnit v-if="selectedUnit === 'hybrid'"></HybridUnit>
     </div>
 </div>
@@ -41,4 +60,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.arrow {
+  margin-top:10px;
+  margin-bottom:-5px;
+}
 </style>

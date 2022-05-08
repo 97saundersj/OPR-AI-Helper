@@ -24,8 +24,7 @@ export default {
 .arrow-container {
   width: 50px;
   margin: auto;
-  margin-bottom: -10px;
-  margin-top: -5px;
+  margin-top: -10px;
   transform: rotate(90deg);
 }
 </style>
