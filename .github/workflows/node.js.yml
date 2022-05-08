@@ -12,8 +12,8 @@ jobs:
         run: |
           npm ci
           npm install @vue/cli-service
-          @vue/cli-service build
-
+          npx -p @vue/cli vue-cli-service build --mode development
+       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
