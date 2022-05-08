@@ -1,6 +1,11 @@
 <script>
+import Arrow from "./Arrow.vue"
+
 export default {
   name: 'HybridUnit',
+  components: {
+    Arrow
+  },
   data() {
     return {
       objectiveNotUnderControl: null,
@@ -17,8 +22,8 @@ export default {
 <template>
   <div>
     <div class="decision-card">
-      <div class="card bg-dark p-2 border-secondary objectives-under-control">
-        <h2>Are there any objectives not under the AI’s control?</h2>
+      <div class="card bg-dark objectives-under-control">
+        <h2 class="card-header">Are there any objectives not under the AI’s control?</h2>
         <div class="d-flex p-2 decision-card">
           <button class="btn btn-primary m-2" :title="Yes" @click="objectiveNotUnderControl = true">Yes</button>
           <button class="btn btn-primary m-2" :title="No" @click="objectiveNotUnderControl = false">No</button>
@@ -26,9 +31,11 @@ export default {
       </div>
     </div>
 
+    <Arrow v-if="objectiveNotUnderControl"></Arrow>
+
     <div class="decision-card" v-if="objectiveNotUnderControl">
-      <div class="card bg-dark p-2 border-secondary decision-card enemies-in-way">
-        <h2>Are there any enemies in the way?</h2>
+      <div class="card bg-dark decision-card enemies-in-way">
+        <h2 class="card-header">Are there any enemies in the way?</h2>
         <div class="d-flex p-2 decision-card">
           <button class="btn btn-primary m-2" :title="Yes" @click="enemiesInWay = true">Yes</button>
           <button class="btn btn-primary m-2" :title="No" @click="enemiesInWay = false">No</button>
@@ -40,9 +47,11 @@ export default {
       </div>
     </div>
 
+    <Arrow v-if="enemiesInWay == false"></Arrow>
+
     <div class="decision-card" v-if="enemiesInWay == false">
-      <div class="card bg-dark p-2 border-secondary decision-card enemies-in-way">
-        <h2>Is the objective in Rush range but not in Advance range?</h2>
+      <div class="card bg-dark decision-card enemies-in-way">
+        <h2 class="card-header">Is the objective in Rush range but not in Advance range?</h2>
         <div class="d-flex p-2 decision-card">
           <button class="btn btn-primary m-2" :title="Yes" @click="inRushRange = true">Yes</button>
           <button class="btn btn-primary m-2" :title="No" @click="inRushRange = false">No</button>
@@ -54,9 +63,11 @@ export default {
       </div>
     </div>
 
+    <Arrow v-if="inRushRange == false"></Arrow>
+
     <div class="decision-card" v-if="inRushRange == false">
-      <div class="card bg-dark p-2 border-secondary decision-card enemies-in-way">
-        <h2>If you Advance will any enemies be in shooting range?</h2>
+      <div class="card bg-dark decision-card enemies-in-way">
+        <h2 class="card-header">If you Advance will any enemies be in shooting range?</h2>
         <div class="d-flex p-2 decision-card">
           <button class="btn btn-primary m-2" :title="Yes" @click="inShootingRange = true">Yes</button>
           <button class="btn btn-primary m-2" :title="No" @click="inShootingRange = false">No</button>
@@ -72,9 +83,11 @@ export default {
       </div>
     </div>
 
+    <Arrow v-if="objectiveNotUnderControl == false"></Arrow>
+
     <div class="decision-card" v-if="objectiveNotUnderControl == false">
-      <div class="card bg-dark p-2 border-secondary decision-card enemies-in-way">
-        <h2>Are any enemies in Charge range?</h2>
+      <div class="card bg-dark decision-card enemies-in-way">
+        <h2 class="card-header">Are any enemies in Charge range?</h2>
         <div class="d-flex p-2 decision-card">
           <button class="btn btn-primary m-2" :title="Yes" @click="inChargeRange = true">Yes</button>
           <button class="btn btn-primary m-2" :title="No" @click="inChargeRange = false">No</button>
@@ -86,9 +99,11 @@ export default {
       </div>
     </div>
 
+    <Arrow v-if="inChargeRange == false"></Arrow>
+
     <div class="decision-card" v-if="inChargeRange == false">
-      <div class="card bg-dark p-2 border-secondary decision-card enemies-in-way">
-        <h2>If you Advance will any enemies be in shooting range?</h2>
+      <div class="card bg-dark decision-card enemies-in-way">
+        <h2 class="card-header">If you Advance will any enemies be in shooting range?</h2>
         <div class="d-flex p-2 decision-card">
           <button class="btn btn-primary m-2" :title="Yes" @click="inShootingRangeOfEnemy = true">Yes</button>
           <button class="btn btn-primary m-2" :title="No" @click="inShootingRangeOfEnemy = false">No</button>

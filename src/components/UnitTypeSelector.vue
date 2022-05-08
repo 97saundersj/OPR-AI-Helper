@@ -1,10 +1,12 @@
 <script>
 import HybridUnit from './HybridUnit.vue'
+import Arrow from "./Arrow.vue"
 
 export default {
   name: 'UnitTypeSelector',
   components: {
-    HybridUnit
+    HybridUnit,
+    Arrow
   },
   props: {
     msg: String
@@ -30,7 +32,8 @@ export default {
         <button class="btn btn-primary m-2" :title="meleeTooltip" @click="selectedUnit = 'melee'">Melee Unit</button>
       </div>
     </div>
-    <div v-if="selectedUnit" class="decision-card">
+    <div v-if="true" class="decision-card">
+      <Arrow></Arrow>
       <HybridUnit v-if="selectedUnit === 'hybrid'"></HybridUnit>
     </div>
 </div>
