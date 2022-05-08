@@ -21,16 +21,16 @@ export default {
 </script>
 
 <template>
-  <div class="card bg-dark p-2 border-secondary">
-  <div class="decision-card card bg-dark border-secondary">
-    <h2>Select a Unit Type</h2>
-    <div class="d-flex p-2">
-      <button class="btn btn-primary m-2" :title="hybridTooltip" @click="selectedUnit = 'hybrid'">Hybrid Unit</button>
-      <button class="btn btn-primary m-2" :title="shootingTooltip" @click="selectedUnit = 'shooting'">Shooting Unit</button>
-      <button class="btn btn-primary m-2" :title="meleeTooltip" @click="selectedUnit = 'melee'">Melee Unit</button>
+  <div>
+    <div class="decision-card card bg-dark">
+      <h2 class="card-header">Select a Unit Type</h2>
+      <div class="card-body">
+        <button class="btn btn-primary m-2" :title="hybridTooltip" @click="selectedUnit = 'hybrid'">Hybrid Unit</button>
+        <button class="btn btn-primary m-2" :title="shootingTooltip" @click="selectedUnit = 'shooting'">Shooting Unit</button>
+        <button class="btn btn-primary m-2" :title="meleeTooltip" @click="selectedUnit = 'melee'">Melee Unit</button>
+      </div>
     </div>
-  </div>
-  <div v-if="selectedUnit" class="decision-card">
+    <div v-if="selectedUnit" class="decision-card">
       <HybridUnit v-if="selectedUnit === 'hybrid'"></HybridUnit>
     </div>
 </div>

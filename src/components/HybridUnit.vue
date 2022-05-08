@@ -34,7 +34,7 @@ export default {
           <button class="btn btn-primary m-2" :title="No" @click="enemiesInWay = false">No</button>
         </div>
 
-        <div v-if="enemiesInWay">
+        <div class="card-footer" v-if="enemiesInWay">
           <p>Charge enemy if possible, else Advance toward objective and shoot if possible, else Rush toward objective</p>
         </div>
       </div>
