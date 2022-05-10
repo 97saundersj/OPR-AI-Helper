@@ -1,18 +1,15 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import UnitTypeSelector from './components/UnitTypeSelector.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     UnitTypeSelector
   }
 }
 </script>
 
 <template>
-  <HelloWorld v-if="false" msg="Welcome to Your Vue.js App"/>
   <div>
     <UnitTypeSelector></UnitTypeSelector>
   </div>
@@ -26,7 +23,7 @@ export default {
   width: auto;
   margin: auto;
   text-align: center;
-  max-width: 500px;
+  max-width: 800px;
   padding: 10px;
 }
 </style>

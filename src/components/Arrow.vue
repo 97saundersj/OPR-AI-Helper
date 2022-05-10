@@ -22,9 +22,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .arrow-container {
-  width: 50px;
+  width: 30px;
   margin: auto;
-  margin-top: -10px;
+  margin-top: -15px;
   transform: rotate(90deg);
 }
 </style>

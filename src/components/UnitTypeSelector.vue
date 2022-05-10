@@ -52,7 +52,6 @@ export default {
       </div>
     </div>
     <div v-if="selectedUnit">
-      <Arrow class="arrow" style="margin-top:10px;"></Arrow>
       <HybridUnit v-if="selectedUnit === 'hybrid'"></HybridUnit>
     </div>
 </div>
