@@ -1,11 +1,13 @@
 <script>
+import AIDecisionTree from './components/AIDecisionTree.vue'
 import NavBar from './components/NavBar.vue'
-import UnitTypeSelector from './components/UnitTypeSelector.vue'
+import UnitTypeSelector from "./components/UnitTypeSelector.vue"
 
 export default {
   name: 'App',
   components: {
     NavBar,
+    AIDecisionTree,
     UnitTypeSelector
   }
 }
@@ -14,7 +16,7 @@ export default {
 <template>
   <div>
     <NavBar></NavBar>
-    <UnitTypeSelector></UnitTypeSelector>
+    <AIDecisionTree></AIDecisionTree>
   </div>
 </template>
 
