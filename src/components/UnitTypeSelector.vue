@@ -7,7 +7,7 @@ export default {
     HybridUnit
   },
   props: {
-    selectedUnitType: String
+    modelValue: String
   },
   data() {
     return {
@@ -18,7 +18,7 @@ export default {
   },
   methods: {
    selectUnitType(newUnitType) {
-     this.$emit('test', newUnitType)
+     this.$emit('update:modelValue', newUnitType)
    }
   }
 }
@@ -31,13 +31,13 @@ export default {
       <div class="card-body">
         <button 
             class="btn m-2"
-            :class="selectedUnitType === 'hybrid' ? 'btn-primary' : 'btn-secondary'"
+            :class="modelValue === 'hybrid' ? 'btn-primary' : 'btn-secondary'"
             :title="hybridTooltip" @click="selectUnitType('hybrid')">
             Hybrid Unit
         </button>
         <button 
           class="btn m-2"
-          :class="selectedUnitType === 'shooting' ? 'btn-primary' : 'btn-secondary'"
+          :class="modelValue === 'shooting' ? 'btn-primary' : 'btn-secondary'"
           :title="shootingTooltip" @click="selectUnitType('shooting')" 
           disabled>
             Shooting Unit
@@ -45,7 +45,7 @@ export default {
 
         <button
           class="btn m-2"
-          :class="selectedUnitType === 'melee' ? 'btn-primary' : 'btn-secondary'"
+          :class="modelValue === 'melee' ? 'btn-primary' : 'btn-secondary'"
           :title="meleeTooltip"
           @click="selectUnitType('melee')"
           disabled>
@@ -53,8 +53,8 @@ export default {
         </button>
       </div>
     </div>
-    <div v-if="selectedUnitType">
-      <HybridUnit v-if="selectedUnitType === 'hybrid'"></HybridUnit>
+    <div v-if="modelValue">
+      <HybridUnit v-if="modelValue === 'hybrid'"></HybridUnit>
     </div>
 </div>
 </template>

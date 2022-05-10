@@ -8,7 +8,7 @@ export default {
   },
   data() {
     return {
-      selectedUnitType: ""
+      selectedUnitType: "test"
     }
   },
   methods: {
@@ -21,7 +21,7 @@ export default {
 
 <template>
   <div>
-    <UnitTypeSelector :selectedUnitType="selectedUnitType" @test="unitTypeChanged"></UnitTypeSelector>
+    <UnitTypeSelector v-model="selectedUnitType"></UnitTypeSelector>
   </div>
 </template>
 
