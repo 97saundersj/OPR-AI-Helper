@@ -1,20 +1,18 @@
 <script>
 import UnitTypeSelector from './UnitTypeSelector.vue'
-
+import HybridUnit from './HybridUnit.vue'
 export default {
   name: 'AIDecisionTree',
   components: {
-    UnitTypeSelector
+    UnitTypeSelector,
+    HybridUnit
   },
   data() {
     return {
-      selectedUnitType: "test"
+      selectedUnitType: ""
     }
   },
   methods: {
-   unitTypeChanged(newUnitType) {
-     this.selectedUnitType = newUnitType
-   }
   }
 }
 </script>
@@ -22,19 +20,13 @@ export default {
 <template>
   <div>
     <UnitTypeSelector v-model="selectedUnitType"></UnitTypeSelector>
+
+    <div v-if="selectedUnitType">
+      <HybridUnit v-if="selectedUnitType === 'hybrid'"></HybridUnit>
+    </div>
   </div>
 </template>
 
-<style>
-.header {
-    padding-left: 1%;
-    margin-bottom: 1%;
-  }
-.decision-card{
-  width: auto;
-  margin: auto;
-  text-align: center;
-  max-width: 800px;
-  padding: 10px;
-}
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
 </style>

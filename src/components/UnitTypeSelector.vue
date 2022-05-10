@@ -1,10 +1,8 @@
 <script>
-import HybridUnit from './HybridUnit.vue'
 
 export default {
   name: 'UnitTypeSelector',
   components: {
-    HybridUnit
   },
   props: {
     modelValue: String
@@ -53,16 +51,9 @@ export default {
         </button>
       </div>
     </div>
-    <div v-if="modelValue">
-      <HybridUnit v-if="modelValue === 'hybrid'"></HybridUnit>
-    </div>
 </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.arrow {
-  margin-top:10px;
-  margin-bottom:-5px;
-}
 </style>
