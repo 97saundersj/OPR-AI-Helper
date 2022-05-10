@@ -1,6 +1,6 @@
 <script>
 import Arrow from "./Arrow.vue"
-
+import DecisionStep from "./DecisionStep.vue"
 export default {
   name: 'HybridUnit',
   components: {

@@ -1,7 +1,7 @@
 <script>
 
 export default {
-  name: 'UnitTypeSelector',
+  name: 'DecisionChoice',
   props: {
     modelValue: String
   },

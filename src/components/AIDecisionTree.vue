@@ -1,11 +1,11 @@
 <script>
 import UnitTypeSelector from './UnitTypeSelector.vue'
-import HybridUnit from './HybridUnit.vue'
+import HybridUnitDecisions from './HybridUnitDecisions.vue'
 export default {
   name: 'AIDecisionTree',
   components: {
     UnitTypeSelector,
-    HybridUnit
+    HybridUnitDecisions
   },
   data() {
     return {
@@ -22,7 +22,7 @@ export default {
     <UnitTypeSelector v-model="selectedUnitType"></UnitTypeSelector>
 
     <div v-if="selectedUnitType">
-      <HybridUnit v-if="selectedUnitType === 'hybrid'"></HybridUnit>
+      <HybridUnitDecisions v-if="selectedUnitType === 'hybrid'"></HybridUnitDecisions>
     </div>
   </div>
 </template>
