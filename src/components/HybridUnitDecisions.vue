@@ -1,10 +1,12 @@
 <script>
 import Arrow from "./Arrow.vue"
 import DecisionStep from "./DecisionStep.vue"
+
 export default {
   name: 'HybridUnit',
   components: {
-    Arrow
+    Arrow,
+    DecisionStep
   },
   data() {
     return {
@@ -21,6 +23,7 @@ export default {
 
 <template>
   <div>
+    <!--
     <div class="decision-card">
       <div class="card bg-dark objectives-under-control">
         <h2 class="card-header">Are there any objectives not under the AI’s control?</h2>
@@ -30,6 +33,12 @@ export default {
         </div>
       </div>
     </div>
+    -->
+    <DecisionStep 
+      class="objectives-under-control"
+      v-model="objectiveNotUnderControl"
+      :choiceText="'Are there any objectives not under the AI’s control?'">
+    </DecisionStep>
 
     <div class="decision-card" v-if="objectiveNotUnderControl">
       <Arrow></Arrow>
