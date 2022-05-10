@@ -1,9 +1,11 @@
 <script>
+import NavBar from './components/NavBar.vue'
 import UnitTypeSelector from './components/UnitTypeSelector.vue'
 
 export default {
   name: 'App',
   components: {
+    NavBar,
     UnitTypeSelector
   }
 }
@@ -11,14 +13,16 @@ export default {
 
 <template>
   <div>
+    <NavBar></NavBar>
     <UnitTypeSelector></UnitTypeSelector>
   </div>
 </template>
 
 <style>
-#app {
-  margin: 1%;
-}
+.header {
+    padding-left: 1%;
+    margin-bottom: 1%;
+  }
 .decision-card{
   width: auto;
   margin: auto;
