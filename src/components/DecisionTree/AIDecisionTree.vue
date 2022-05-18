@@ -1,11 +1,14 @@
 <script>
 import UnitTypeSelector from './UnitTypeSelector.vue'
 import HybridUnitDecisions from './DecisionTreePaths/HybridUnitDecisions.vue'
+import ShootingUnitDecisions from './DecisionTreePaths/ShootingUnitDecisions.vue'
+
 export default {
   name: 'AIDecisionTree',
   components: {
     UnitTypeSelector,
-    HybridUnitDecisions
+    HybridUnitDecisions,
+    ShootingUnitDecisions
   },
   data() {
     return {
@@ -23,6 +26,7 @@ export default {
 
     <div v-if="selectedUnitType">
       <HybridUnitDecisions v-if="selectedUnitType === 'hybrid'"></HybridUnitDecisions>
+      <ShootingUnitDecisions v-if="selectedUnitType === 'shooting'"></ShootingUnitDecisions>
     </div>
   </div>
 </template>

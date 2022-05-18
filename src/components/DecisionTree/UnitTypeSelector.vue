@@ -30,12 +30,10 @@ export default {
             Hybrid Unit
         </button>
 
-        <div class="d-inline-block disabled-wrapper" tabindex="0" data-bs-toggle="tooltip" :title="shootingTooltip">
         <button class="btn m-2" :class="modelValue === 'shooting' ? 'btn-primary' : 'btn-secondary'" 
-          data-bs-toggle="tooltip" :title="shootingTooltip" @click="selectUnitType('shooting')" disabled>
+          data-bs-toggle="tooltip" :title="shootingTooltip" @click="selectUnitType('shooting')">
             Shooting Unit
         </button>
-        </div>
 
         <div class="d-inline-block disabled-wrapper" tabindex="0" data-bs-toggle="tooltip" :title="meleeTooltip">
         <button
