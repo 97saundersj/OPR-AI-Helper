@@ -1,7 +1,8 @@
 <script>
-import AIDecisionTree from './components/AIDecisionTree.vue'
+import AIDecisionTree from './components/DecisionTree/AIDecisionTree.vue'
 import NavBar from './components/NavBar.vue'
-import UnitTypeSelector from "./components/UnitTypeSelector.vue"
+import UnitTypeSelector from "./components/DecisionTree/UnitTypeSelector.vue"
+import { Tooltip } from 'bootstrap/dist/js/bootstrap.esm.min.js'
 
 export default {
   name: 'App',
@@ -9,6 +10,10 @@ export default {
     NavBar,
     AIDecisionTree,
     UnitTypeSelector
+  },
+  mounted() {
+    // Initialize Bootstrap tooltip
+    Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]')).forEach(tooltipNode => new Tooltip(tooltipNode))
   }
 }
 </script>

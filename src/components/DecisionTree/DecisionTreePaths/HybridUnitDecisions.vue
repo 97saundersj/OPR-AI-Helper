@@ -1,6 +1,6 @@
 <script>
-import Arrow from "./Arrow.vue"
-import DecisionStep from "./DecisionStep.vue"
+import Arrow from "../../DecisionTree/Arrow.vue"
+import DecisionStep from "../../DecisionTree/DecisionStep.vue"
 
 export default {
   name: 'HybridUnit',

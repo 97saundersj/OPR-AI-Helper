@@ -1,6 +1,6 @@
 <script>
 import UnitTypeSelector from './UnitTypeSelector.vue'
-import HybridUnitDecisions from './HybridUnitDecisions.vue'
+import HybridUnitDecisions from './DecisionTreePaths/HybridUnitDecisions.vue'
 export default {
   name: 'AIDecisionTree',
   components: {
