@@ -1,6 +1,6 @@
 <script>
-import Arrow from "../../DecisionTree/Arrow.vue"
-import DecisionStep from "../../DecisionTree/DecisionStep.vue"
+import Arrow from "../Arrow.vue"
+import DecisionStep from "../DecisionStep.vue"
 
 export default {
   name: 'HybridUnit',
@@ -36,7 +36,7 @@ export default {
       :requiredStepsMet="objectiveNotUnderControl"
       v-model="enemiesInWay"
       :choiceText="'Are there any enemies in the way?'"
-      :resultYesText="'Charge enemy if possible,<br/>-else Advance toward objective and shoot if possible,<br/>-else Rush toward objective.'">
+      :resultYesText="'Charge enemy if possible,<br/>Else Advance toward objective and shoot if possible,<br/>Else Rush toward objective.'">
     </DecisionStep>
 
     <DecisionStep 

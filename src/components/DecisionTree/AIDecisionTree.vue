@@ -1,14 +1,16 @@
 <script>
 import UnitTypeSelector from './UnitTypeSelector.vue'
-import HybridUnitDecisions from './DecisionTreePaths/HybridUnitDecisions.vue'
-import ShootingUnitDecisions from './DecisionTreePaths/ShootingUnitDecisions.vue'
+import HybridDecisionTree from './DecisionTreePaths/HybridDecisionTree.vue'
+import ShootingDecisionTree from './DecisionTreePaths/ShootingDecisionTree.vue'
+import MeleeDecisionTree from './DecisionTreePaths/MeleeDecisionTree.vue'
 
 export default {
   name: 'AIDecisionTree',
   components: {
     UnitTypeSelector,
-    HybridUnitDecisions,
-    ShootingUnitDecisions
+    HybridDecisionTree,
+    ShootingDecisionTree,
+    MeleeDecisionTree
   },
   data() {
     return {
@@ -25,8 +27,9 @@ export default {
     <UnitTypeSelector v-model="selectedUnitType"></UnitTypeSelector>
 
     <div v-if="selectedUnitType">
-      <HybridUnitDecisions v-if="selectedUnitType === 'hybrid'"></HybridUnitDecisions>
-      <ShootingUnitDecisions v-if="selectedUnitType === 'shooting'"></ShootingUnitDecisions>
+      <HybridDecisionTree v-if="selectedUnitType === 'hybrid'"></HybridDecisionTree>
+      <ShootingDecisionTree v-if="selectedUnitType === 'shooting'"></ShootingDecisionTree>
+      <MeleeDecisionTree v-if="selectedUnitType === 'melee'"></MeleeDecisionTree>
     </div>
   </div>
 </template>

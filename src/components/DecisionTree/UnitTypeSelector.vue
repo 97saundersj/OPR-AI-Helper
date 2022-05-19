@@ -35,16 +35,10 @@ export default {
             Shooting Unit
         </button>
 
-        <div class="d-inline-block disabled-wrapper" tabindex="0" data-bs-toggle="tooltip" :title="meleeTooltip">
-        <button
-          class="btn m-2"
-          :class="modelValue === 'melee' ? 'btn-primary' : 'btn-secondary'"
-          :title="meleeTooltip"
-          @click="selectUnitType('melee')"
-          disabled>
+        <button class="btn m-2" :class="modelValue === 'melee' ? 'btn-primary' : 'btn-secondary'"
+          data-bs-toggle="tooltip" :title="meleeTooltip" @click="selectUnitType('melee')" >
             Melee Unit
         </button>
-        </div>
       </div>
     </div>
 </div>
