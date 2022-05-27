@@ -25,26 +25,18 @@ export default {
     <div class="decision-card card bg-dark">
       <h2 class="card-header">Select a Unit Type</h2>
       <div class="card-body">
-        <button 
-            class="btn m-2"
-            :class="modelValue === 'hybrid' ? 'btn-primary' : 'btn-secondary'"
-            :title="hybridTooltip" @click="selectUnitType('hybrid')">
+        <button class="btn m-2" :class="modelValue === 'hybrid' ? 'btn-primary' : 'btn-secondary'"
+            data-bs-toggle="tooltip" :title="hybridTooltip" @click="selectUnitType('hybrid')">
             Hybrid Unit
         </button>
-        <button 
-          class="btn m-2"
-          :class="modelValue === 'shooting' ? 'btn-primary' : 'btn-secondary'"
-          :title="shootingTooltip" @click="selectUnitType('shooting')" 
-          disabled>
+
+        <button class="btn m-2" :class="modelValue === 'shooting' ? 'btn-primary' : 'btn-secondary'" 
+          data-bs-toggle="tooltip" :title="shootingTooltip" @click="selectUnitType('shooting')">
             Shooting Unit
         </button>
 
-        <button
-          class="btn m-2"
-          :class="modelValue === 'melee' ? 'btn-primary' : 'btn-secondary'"
-          :title="meleeTooltip"
-          @click="selectUnitType('melee')"
-          disabled>
+        <button class="btn m-2" :class="modelValue === 'melee' ? 'btn-primary' : 'btn-secondary'"
+          data-bs-toggle="tooltip" :title="meleeTooltip" @click="selectUnitType('melee')" >
             Melee Unit
         </button>
       </div>
