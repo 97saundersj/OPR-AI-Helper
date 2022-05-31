@@ -1,11 +1,9 @@
 <script>
-import Arrow from "../Arrow.vue"
-import DecisionStep from "../DecisionStep.vue"
+import DecisionStep from "../DecisionStep/DecisionStep.vue"
 
 export default {
   name: 'HybridUnit',
   components: {
-    Arrow,
     DecisionStep
   },
   data() {

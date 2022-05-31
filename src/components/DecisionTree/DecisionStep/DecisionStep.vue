@@ -39,15 +39,15 @@ export default {
 <template>
 <div v-if="requiredStepsMet">
 
-  <div class="decision-card">
-    <Arrow v-if="requiredStepsMet && useArrow"></Arrow>
+  <div class="decision-step">
+    <Arrow class="arrow" v-if="requiredStepsMet && useArrow"></Arrow>
 
-    <div class="card bg-dark objectives-under-control">
+    <div class="card bg-dark decision-card">
       <h2 class="card-header" v-html="choiceText"></h2>
 
-      <div class="d-flex p-2 decision-card">
-        <button class="btn m-2" :class="modelValue ? 'btn-primary' : 'btn-secondary'" @click="setDecision(true)">Yes</button>
-        <button class="btn m-2" :class="modelValue === false ? 'btn-primary' : 'btn-secondary'" @click="setDecision(false)">No</button>
+      <div class="d-flex p-2 decision-options">
+        <button class="btn m-2" data-cy="btn-yes" :class="modelValue ? 'btn-primary' : 'btn-secondary'" @click="setDecision(true)">Yes</button>
+        <button class="btn m-2" data-cy="btn-no" :class="modelValue === false ? 'btn-primary' : 'btn-secondary'" @click="setDecision(false)">No</button>
       </div>
 
       <div class="card-footer">
@@ -60,6 +60,12 @@ export default {
 </div>
 </template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.decision-options{
+  width: auto;
+  margin: auto;
+  text-align: center;
+  max-width: 800px;
+  padding: 10px;
+}
 </style>

@@ -30,7 +30,7 @@ export default {
     padding-left: 1%;
     margin-bottom: 1%;
   }
-.decision-card{
+.decision-step{
   width: auto;
   margin: auto;
   text-align: center;
